@@ -5,10 +5,6 @@ library(randtoolbox)
 
 df1 = fread("D:/SEMESTR IV/PRAKTYKI/dane1.csv")
 
-# data3 = join(df1, df2,
-#      type = "full")
-
-
 setwd("D:/SEMESTR IV/PRAKTYKI/csvFiles10mln")
 fileList = list.files(path = "D:/SEMESTR IV/PRAKTYKI/csvFiles10mln")
 
