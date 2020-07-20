@@ -19,12 +19,12 @@ Analizę statystyczną w R umożliwiły mi testy dostępne w bibliotece randtool
 
 Z powodu braku odpowiednich testów statystycznych w bibliotekach dostępnych w Pythonie, zdecydowałam się zapisać wygenerowane sekwencje z Pythona do plików csv, a następnie wykonanie ich analizy za pomocą tych samych testów z pakietu randtoolbox z R. Wyniki prezentowały się odmiennie niż w R - wstępna analiza na podstawie wartości p pozwala na przypuszczenie, że sekwencje te zostały wygenerowane w sposób losowy. Wykonałam wspomniane wyżej testy dla wektorów o długości 1 i 10 milionów i teraz przedstawię kilka z nich  dla różnych generatorów:
 
-# Gap test dla 1 milionowego wektora generowanego przez ThreeFry
+#### Gap test dla 1 milionowego wektora generowanego przez ThreeFry
 <img src="https://user-images.githubusercontent.com/67383292/87986089-f0376700-cadc-11ea-888f-8094667de6d6.png">
-# Order test dla 1 milionowych wektorów dla trzech generatorów
+#### Order test dla 1 milionowych wektorów dla trzech generatorów
 <img src="https://user-images.githubusercontent.com/67383292/87986093-f1689400-cadc-11ea-9084-23da2c01f6c7.png">
-# Frequency test dla 10 milionowych wektorów dla trzech generatorów
+#### Frequency test dla 10 milionowych wektorów dla trzech generatorów
 <img src="https://user-images.githubusercontent.com/67383292/87986096-f2012a80-cadc-11ea-8ff5-5276f08bac22.png">
-# Serial test dla 10 milionowych wektorów dla trzech generatorów
+#### Serial test dla 10 milionowych wektorów dla trzech generatorów
 <img src="https://user-images.githubusercontent.com/67383292/87986105-f3325780-cadc-11ea-8da1-2bd2f380d3b1.png">
 
