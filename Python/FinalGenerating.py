@@ -64,22 +64,39 @@ del mt2
 # generuje wektory o dlugosci 100 mln:
 
 xor3 = XoroshiroGenerator(None, 100000000)
-xor3.generateBitmap("xor3_bitmap")
+vectorArrayXor3 = xor3.getSequence()
+print(vectorArrayXor3)
+# xor3.generateBitmap("xor3_bitmap")
+
+for i in range(100):
+    df3 = pd.DataFrame(pd.DataFrame.from_dict({"xor3": vectorArrayXor3[0+i*1000000:1000000+i*1000000]}))
+    df3.to_csv("D:\SEMESTR IV\PRAKTYKI\csvFilesXor3\dane3"+str(i)+".csv", index=False)
+
 del xor3
+
 tf3 = ThreeFryGenerator(None, 100000000)
-tf3.generateBitmap("tf3_bitmap")
+vectorArrayTf3 = tf3.getSequence()
+# tf3.generateBitmap("tf3_bitmap")
+
+for i in range(100):
+    df3 = pd.DataFrame(pd.DataFrame.from_dict({"tf3": vectorArrayTf3[0+i*1000000:1000000+i*1000000]}))
+    df3.to_csv("D:\SEMESTR IV\PRAKTYKI\csvFilesTf3\dane4"+str(i)+".csv", index=False)
+
 del tf3
+
 mt3 = MersenneTwisterGenerator(None, 100000000)
-mt3.generateBitmap("mt3_bitmap")
+vectorArrayMt3 = mt3.getSequence()
+# mt3.generateBitmap("mt3_bitmap")
+
+for i in range(100):
+    df3 = pd.DataFrame(pd.DataFrame.from_dict({"mt3": vectorArrayMt3[0+i*1000000:1000000+i*1000000]}))
+    df3.to_csv("D:\SEMESTR IV\PRAKTYKI\csvFilesMt3\dane5"+str(i)+".csv", index=False)
+
 del mt3
 
 # print("xor3 = ", xor3.getResult())
 # print("tf3 = ", tf3.getResult())
 # print("mt3 = ", mt3.getResult())
-
-# vectorArrayXor3 = xor3.getSequence()
-# vectorArrayTf3 = tf3.getSequence()
-# vectorArrayMt3 = mt3.getSequence()
 
 
 #df3 = pd.DataFrame.to_clipboard(pd.DataFrame({"xor3": vectorArrayXor3, "tf3": vectorArrayTf3,"mt3": vectorArrayMt3}))

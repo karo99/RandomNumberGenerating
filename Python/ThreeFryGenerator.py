@@ -4,6 +4,7 @@ from timeit import default_timer as timer
 from PIL import Image
 import math
 
+
 class ThreeFryGenerator:
     seq = 0
     time = 0
