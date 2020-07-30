@@ -27,5 +27,3 @@ class GeneratingRBitmaps:
             for j in range(img.size[1]):
                 pixels[i, j] = self.seq[j + i * dimension]
         img.save("D:/SEMESTR IV/PRAKTYKI/RandomNumberGenerating/R/BitmapyR/" + name + ".bmp", format="bmp")
-
-
