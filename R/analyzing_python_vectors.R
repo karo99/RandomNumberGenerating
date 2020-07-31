@@ -3,39 +3,39 @@ library(plyr)
 library(randtoolbox)
 
 
-# df1 = fread("D:/SEMESTR IV/PRAKTYKI/dane1.csv")
-#
-# setwd("D:/SEMESTR IV/PRAKTYKI/csvFiles10mln")
-# fileList = list.files(path = "D:/SEMESTR IV/PRAKTYKI/csvFiles10mln")
-#
-# dataset = data.frame()
-#
-# for (i in 1:length(fileList)){
-#   tempDf = fread(fileList[i])
-#   dataset = rbind(dataset, tempDf)
-# }
+df1 = fread("D:/SEMESTR IV/PRAKTYKI/dane1.csv")
+
+setwd("D:/SEMESTR IV/PRAKTYKI/csvFiles10mln")
+fileList = list.files(path = "D:/SEMESTR IV/PRAKTYKI/csvFiles10mln")
+
+dataset = data.frame()
+
+for (i in 1:length(fileList)){
+  tempDf = fread(fileList[i])
+  dataset = rbind(dataset, tempDf)
+}
 
 # odczyt 100 mln wektorow z csv
 
-# setwd("D:/SEMESTR IV/PRAKTYKI/csvFilesXor3")
-# fileList = list.files(path = "D:/SEMESTR IV/PRAKTYKI/csvFilesXor3")
-#
-# dataset1 = data.frame()
-#
-# for (i in 1:length(fileList)){
-#   tempDf = fread(fileList[i])
-#   dataset1 = rbind(dataset1, tempDf)
-# }
+setwd("D:/SEMESTR IV/PRAKTYKI/csvFilesXor3")
+fileList = list.files(path = "D:/SEMESTR IV/PRAKTYKI/csvFilesXor3")
 
-# setwd("D:/SEMESTR IV/PRAKTYKI/csvFilesTf3")
-# fileList = list.files(path = "D:/SEMESTR IV/PRAKTYKI/csvFilesTf3")
-#
-# dataset2 = data.frame()
-#
-# for (i in 1:length(fileList)){
-#   tempDf = fread(fileList[i])
-#   dataset2 = rbind(dataset2, tempDf)
-# }
+dataset1 = data.frame()
+
+for (i in 1:length(fileList)){
+  tempDf = fread(fileList[i])
+  dataset1 = rbind(dataset1, tempDf)
+}
+
+setwd("D:/SEMESTR IV/PRAKTYKI/csvFilesTf3")
+fileList = list.files(path = "D:/SEMESTR IV/PRAKTYKI/csvFilesTf3")
+
+dataset2 = data.frame()
+
+for (i in 1:length(fileList)){
+  tempDf = fread(fileList[i])
+  dataset2 = rbind(dataset2, tempDf)
+}
 
 setwd("D:/SEMESTR IV/PRAKTYKI/csvFilesMt3")
 fileList = list.files(path = "D:/SEMESTR IV/PRAKTYKI/csvFilesMt3")
@@ -90,21 +90,21 @@ serial.test(dataset$mt2)
 
 #testy dla 100 mln wektorow
 
-#freq.test(dataset1$xor3)
-#freq.test(dataset2$tf3)
+freq.test(dataset1$xor3)
+freq.test(dataset2$tf3)
 freq.test(dataset3$mt3)
 
-#order.test(dataset1$xor3, 2)
-#order.test(dataset2$tf3, 2)
+order.test(dataset1$xor3, 2)
+order.test(dataset2$tf3, 2)
 order.test(dataset3$mt3, 2)
 
 
-#gap.test(dataset1$xor3)
-#gap.test(dataset2$tf3)
+gap.test(dataset1$xor3)
+gap.test(dataset2$tf3)
 gap.test(dataset3$mt3)
 
 
-#serial.test(dataset1$xor3)
-#serial.test(dataset2$tf3)
+serial.test(dataset1$xor3)
+serial.test(dataset2$tf3)
 serial.test(dataset3$mt3)
 
